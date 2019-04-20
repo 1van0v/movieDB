@@ -1,5 +1,6 @@
 .preview-item {
     padding: 5px;
+    font-weight: 300;
 }
 
 .poster-container {
@@ -21,4 +22,27 @@
 
 .preview-item:hover {
     box-shadow: 0 0 5px rgba(33,33,33,.2);
+}
+
+.rating {
+    padding-right: 10px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.rating > img {
+    width: 2vw;
+    object-fit: contain;
+    margin-right: 0.1vw;
+}
+.preview-item p {
+    align: justify;
+}
+
+.release-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }

@@ -15,9 +15,10 @@ export default class MovieDb {
         * */
         const response = await fetch(`${this._apibase}/trending/${type}/${period}?${this.addKey()}&page=${page}`);
         const result = await response.json();
-        return result.results.map((i) => {
+        result.results = await result.results.map((i) => {
             return this._transformTrending(i)
-        })
+        });
+        return result;
     }
 
     _transformTrending = (item) => {

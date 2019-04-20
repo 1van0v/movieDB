@@ -1,5 +1,6 @@
 import React from "react";
 import "./item-preview.css";
+import star from "./star.jpg";
 
 const ItemPreview = ({item}) => {
     const {id, title, poster, releaseDate,
@@ -10,8 +11,13 @@ const ItemPreview = ({item}) => {
                 <img src={poster} alt="poster" />
             </div>
             <h2>{title}</h2>
-            <span title={`${rating} based on ${voters} user ratings`}>{rating}</span>
-            <div>Release Date: <span>{releaseDate}</span></div>
+            <div className="release-date">
+            <div className="rating" title={`${rating} based on ${voters} user ratings`}>
+                <img src={star} alt="star" />
+                <p>{rating}</p>
+            </div>
+            <div><b>Released:</b> <span>{releaseDate}</span></div>
+            </div>
             <p>{overview}</p>
         </div>
     )
