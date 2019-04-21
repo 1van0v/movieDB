@@ -8,6 +8,10 @@ export default class SearchBar extends React.Component {
     };
 
     searchRequest = (query) => {
+        if (query === "") {
+            this.resetSearch()
+            return;
+        }
         this.setState({
             query
         });
