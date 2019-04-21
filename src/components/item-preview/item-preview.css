@@ -5,8 +5,7 @@
 
 .list-preview {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: minmax(150px, 1fr) auto;
+    grid-template-columns: 150px 1fr;
     grid-gap: 20px;
 }
 
