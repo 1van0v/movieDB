@@ -3,8 +3,8 @@ import "./item-preview.css";
 import star from "./star.jpg";
 
 const ItemPreview = ({item}) => {
-    const {id, title, poster, releaseDate,
-        overview, genres, rating, voters } = item;
+    const {title, poster, releaseDate,
+        overview, rating, voters } = item;
     return (
         <div className="preview-item">
             <div className="poster-container">
