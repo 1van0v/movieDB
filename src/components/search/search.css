@@ -39,3 +39,12 @@
 .list-mode {
     content: url("https://static.thenounproject.com/png/690222-200.png");
 }
+
+.reset-btn {
+    content: url("https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png");
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}

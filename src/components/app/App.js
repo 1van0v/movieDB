@@ -40,11 +40,19 @@ export default class App extends React.Component {
         })
     };
 
+    resetView = () => {
+        this.setState({
+            activeView: "trending",
+            query: ""
+        })
+    };
+
     render() {
         return (
             <div>
                 <Header />
-                <SearchBar onSearch={this.onSearch} />
+                <SearchBar onSearch={this.onSearch}
+                           onReset={this.resetView} />
                 <ListItem getData={this.getData} query={this.state.query} />
             </div>
         )

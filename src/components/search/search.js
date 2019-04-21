@@ -23,7 +23,16 @@ export default class SearchBar extends React.Component {
         this.setState({timer});
     };
 
+    resetSearch = () => {
+        this.props.onReset();
+        this.setState({
+            query: ""
+        })
+    };
+
     render() {
+        let resetClasses = "reset-btn buttons";
+        resetClasses += this.state.query ? "" : " hidden";
         return (
             <form className="search-form">
                 <input type="text"
@@ -33,6 +42,9 @@ export default class SearchBar extends React.Component {
                            e.stopPropagation();
                        }}
                        placeholder="Find Movies" value={this.state.query}/>
+                <span className={resetClasses}
+                      onClick={this.resetSearch}
+                      title="reset search"> </span>
                 <img className="buttons" src={searchIcon} alt="search" />
                 <span className="buttons right-edge grid-mode" title="change to list"> </span>
             </form>
