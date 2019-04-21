@@ -1,6 +1,14 @@
-.main-list {
+.main-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
     justify-content: space-around;
+}
+
+.main-list-view {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
 }

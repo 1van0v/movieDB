@@ -60,14 +60,16 @@ export default class ListItem extends React.Component {
 
     render() {
         const {ListItem} = this.state;
+        const {viewMode} = this.props;
+        let listClass = viewMode === "list" ? "main-list-view" : "main-list-grid";
         if (!ListItem) {
             return null;
         }
         const items = ListItem.map((item) => {
-            return <ItemPreview item={item} key={item.id}/>
+            return <ItemPreview item={item} key={item.id} mode={viewMode}/>
         });
         return (
-            <div className="main-list">
+            <div className={listClass}>
                 {items}
             </div>
         )

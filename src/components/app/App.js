@@ -9,7 +9,8 @@ import MovieDb from "../../services/moviedb";
 export default class App extends React.Component {
 
     state = {
-        activeView: "trending"
+        activeView: "trending",
+        viewMode: "grid"
     };
 
     api = new MovieDb("6894e1c0f5ba77055a8cfe46ddf13cec");
@@ -47,13 +48,26 @@ export default class App extends React.Component {
         })
     };
 
+    onViewModeChange = () => {
+        const current = this.state.viewMode;
+        const newMode = current === "list" ? "grid" : "list";
+        this.setState({
+            viewMode: newMode
+        })
+    };
+
     render() {
+        const {viewMode} = this.state;
         return (
             <div>
                 <Header />
                 <SearchBar onSearch={this.onSearch}
+                           onViewModeChange={this.onViewModeChange}
+                           viewMode={viewMode}
                            onReset={this.resetView} />
-                <ListItem getData={this.getData} query={this.state.query} />
+                <ListItem getData={this.getData}
+                          viewMode={viewMode}
+                          query={this.state.query} />
             </div>
         )
     }

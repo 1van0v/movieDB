@@ -3,6 +3,13 @@
     font-weight: 300;
 }
 
+.list-preview {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: minmax(150px, 1fr) auto;
+    grid-gap: 20px;
+}
+
 .poster-container {
     overflow: hidden;
 }
@@ -37,7 +44,7 @@
     object-fit: contain;
     margin-right: 0.1vw;
 }
-.preview-item > p {
+.preview-item p {
     text-align: justify;
     margin-top: 0;
 }
@@ -48,6 +55,11 @@
     align-items: baseline;
 }
 
-.preview-item > h2 {
+.preview-item  h2 {
     margin-bottom: 0;
+}
+
+.non-select {
+    user-select: none;
+    -moz-user-select: none;
 }

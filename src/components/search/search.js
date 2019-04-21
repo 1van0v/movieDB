@@ -37,6 +37,9 @@ export default class SearchBar extends React.Component {
     render() {
         let resetClasses = "reset-btn buttons";
         resetClasses += this.state.query ? "" : " hidden";
+        const {viewMode} = this.props;
+        let titleMode = "change to ";
+        titleMode += viewMode === "grid" ? "list" : "grid";
         return (
             <form className="search-form">
                 <input type="text"
@@ -50,7 +53,9 @@ export default class SearchBar extends React.Component {
                       onClick={this.resetSearch}
                       title="reset search"> </span>
                 <img className="buttons" src={searchIcon} alt="search" />
-                <span className="buttons right-edge grid-mode" title="change to list"> </span>
+                <span className={`buttons right-edge non-select ${viewMode}`}
+                      onClick={this.props.onViewModeChange}
+                      title={titleMode}> </span>
             </form>
         )
 
