@@ -1,0 +1,41 @@
+header img {
+    width: 8vw;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.logo > img {
+    margin-right: 1rem;
+}
+
+.logo > span {
+    font-size: 4vw;
+}
+
+header > nav {
+    margin: auto;
+}
+
+.button {
+    color: black;
+    background-color: inherit;
+    border: none;
+    font-size: 2vw;
+    cursor: pointer;
+    padding: 2vh 2vw;
+}
+
+.button:hover {
+    text-decoration: underline;
+    color: firebrick;
+}

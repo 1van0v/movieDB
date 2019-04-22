@@ -1,0 +1,50 @@
+
+.search-form {
+    margin: 2vh auto;
+    width: 30vw;
+    display: flex;
+}
+
+.search-form > * {
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.search-form > input {
+    border-radius: 15px 0 0 15px;
+    border: 1px solid lightblue;
+    width: 70%;
+    padding-left: 5px;
+    border-right: none;
+}
+
+.buttons {
+    border: 1px solid lightblue;
+    background: azure;
+    border-left-width: 0;
+    object-fit: contain;
+    padding: 4px;
+    cursor: pointer;
+
+}
+
+.grid {
+    content: url("https://d30y9cdsu7xlg0.cloudfront.net/png/110306-200.png");
+}
+
+.right-edge {
+    border-radius: 0 15px 15px 0;
+}
+
+.list {
+    content: url("https://static.thenounproject.com/png/690222-200.png");
+}
+
+.reset-btn {
+    content: url("https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png");
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
